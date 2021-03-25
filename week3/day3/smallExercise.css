@@ -1,0 +1,7 @@
+.txtOverImage {
+  background-color: rgb(104, 184, 233);
+  position: absolute;
+  left: 300px;
+  top: 100px;
+  z-index: 2;
+}

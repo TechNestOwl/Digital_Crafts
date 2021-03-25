@@ -1,0 +1,11 @@
+/* We can target elements with css*/
+body {
+    background-color: rgb(17, 17, 72); 
+    color: white;
+}
+h1 {
+    color: coral;
+}
+.testClass {
+    color:cornflowerblue
+}

@@ -1,0 +1,44 @@
+header {
+  background-color: whitesmoke;
+}
+body {
+  background-color: whitesmoke;
+}
+footer {
+    position:fixed;
+    bottom:0;
+}
+button {
+    cursor: pointer;;
+    pointer-events: visiblePainted;
+}
+.search button {
+  background-color: rgb(198, 40, 40);
+}
+.leftContent button {
+  border: none;
+}
+.rightContent button {
+    display:flex;
+    align-content: flex-end;
+
+}
+
+.CenterPic {
+  margin-top: 150px;
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.SearchBar {
+  min-height: 10vh;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footButton {
+    border-color: mediumaquamarine;
+    
+}

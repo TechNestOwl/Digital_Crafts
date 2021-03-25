@@ -1,0 +1,40 @@
+body {
+  background-color: rgb(77, 76, 84);
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.greeting {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  top: 50px;
+}
+.greetingText {
+  color: rgb(181, 176, 176);
+}
+
+header {
+  position: fixed;
+}
+
+.hobbyContainer {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+img {
+  height: 200px;
+}
+.namePlate {
+  display: flex;
+  align-content: stretch;
+  flex-direction: column;
+  padding: 20px;
+}
