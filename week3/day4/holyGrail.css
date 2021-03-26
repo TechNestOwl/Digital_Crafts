@@ -1,0 +1,39 @@
+body {
+  background-color: rgb(216, 199, 176);
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 1fr 1fr;
+  grid-template-rows: 1fr 10fr 5fr 0.5fr;
+  grid-template-areas:
+    "sidebar nav nav nav"
+    "sidebar content1 content2 ads"
+    "sidebar footer footer footer";
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: turquoise;
+}
+.ads {
+  grid-area: ads;
+  background-color: rgb(210, 220, 20);
+}
+
+.navbar {
+  grid-area: nav;
+  background-color: teal;
+}
+.content1 {
+  grid-area: content1;
+  background-color: rgb(131, 167, 186);
+}
+.content2 {
+  grid-area: content2;
+  background-color: rgb(235, 154, 169);
+}
+.footer {
+  grid-area: footer;
+  background-color: chocolate;
+}

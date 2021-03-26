@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(232, 175, 135);
+}
+
+.grid-container-1 {
+    display: grid;
+    grid-template-rows: repeat(2,120px);
+    grid-template-columns: repeat(3, 60px);
+    grid-gap: 5px;
+}
+
+.grid-container-2 {
+    display:grid;
+    grid-template-rows: repeat(2, 50px);
+    grid-template-columns: repeat(5, 40px);
+}
+
+#content1 {
+    background-color: rgb(189, 184, 34);
+}
+
+#content2{
+    background-color: rgb(244, 247, 244);
+}
+
+#content3 {
+    background-color: rgb(12, 94, 14);
+}
+
+#content4 {
+    background-color: red;
+}
+
+#content5{
+    background-color: rgb(244, 247, 244);
+}
+
+#content6 {
+    background-color: rgb(33, 4, 220);
+}

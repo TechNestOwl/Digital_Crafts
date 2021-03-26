@@ -1,0 +1,11 @@
+* {
+  text-align: center;
+}
+.container {
+  justify-content: center;
+  align-content: center;
+}
+
+.container-sm {
+  background-color: darkkhaki;
+}
