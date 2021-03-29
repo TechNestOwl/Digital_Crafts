@@ -30,3 +30,10 @@ for( const pizza in collectionOfPizzas) {
 
 
 // for of is for arrays
+
+let cars = ["Subaru", "Audi", "Honda", "BMW"];
+
+for (const car of cars) {
+    console.log("this is a ", car);
+}
+
