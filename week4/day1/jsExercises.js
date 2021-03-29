@@ -1,7 +1,7 @@
 //variables
 var doNotUse = "not suggested to use in modern use of JS";
 let x = 666;
-const y = "nver changes";
+const y = "shouldn't changes";
 
 //array 
 let thisIsAnArray = [1,2,5,69, "sixtynine"];
@@ -15,7 +15,7 @@ let tastySnacks = {
 
 let integer = 5;
 let disBeAString = "string";
-//let disBeAString = "now the string is this";
+disBeAString = "now the string is this";
 
 let newVariable = integer * 5;
 let shwag = ["swag", 123123, true, false, "boolean"];
