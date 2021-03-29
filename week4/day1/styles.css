@@ -1,0 +1,7 @@
+.main-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.header-text {
+  grid-column: 2/3;
+}
