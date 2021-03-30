@@ -1,0 +1,26 @@
+body {
+  background: #3e5151; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #3e5151, #decba4);
+  background: linear-gradient(to right, #3e5151, #decba4);
+
+  font-family: "Montserrat", sans-serif;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  background-color: cadetblue;
+}
+
+input {
+  background-color: rgb(138, 144, 145);
+}
+
+.tip-history {
+  font-size: 1.5rem;
+}

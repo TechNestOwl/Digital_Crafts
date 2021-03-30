@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tipCalculator.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="formContainer">
+        <table cellpadding='2px' cellspacing='5px'>
+            <h2>Tip Calculator</h2>
+            <th></th>
+            <tr>
+                <td>Bill Amount (in Dollars): </td>
+                <td><span>$ <input type='text' id='bill' placeholder="Enter bill amount"></span></td>
+            </tr>
+            <tr>
+                <td>Tip Amount (in %): </td>
+                <td>
+                    <span>% <input type='text' id='tip' placeholder='ie. 15'></span>
+                </td>
+            </tr>
+            <td></td>
+            <tr>
+                <td></span></h3>
+                </td>
+            </tr>
+        </table>
+        <button onclick="calculateTip()" type='button'>Calculate Total</button>
+        <h3>The total amount with tip is: $ <span class="total"></span>
+            <p>
+                <h4>Tip History:</h4>
+                <ol class="tip-history">
+                
+                </ol>
+            </p>
+            
+
+    </div>
+    <script>
+        function calculateTip(){
+
+            //Calculate
+
+            const billAmount = document.querySelector("#bill").value
+            //console.log(billAmount)
+            const tipAmount = document.querySelector("#tip").value
+            //console.log(tipAmount)
+            const tipValue = billAmount * `1.${tipAmount}`
+            const yourTip = document.querySelector(".total")
+            yourTip.innerText = tipValue.toFixed(2)
+
+            //create tip history List
+
+            /*const tipDiv = document.createElement("div")
+            tipDiv.className = "tip-history"*/
+            //console.log(tipDiv)
+            const list = document.querySelector(".tip-history")
+            const newListItem = document.createElement("li")
+            newListItem.innerText = tipAmount
+            list.append(newListItem)
+            
+
+        
+        }
+
+    </script>
+</body>
+
+</html>

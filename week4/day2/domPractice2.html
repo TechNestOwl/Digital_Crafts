@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheed" href="tipCalculator.css">
 </head>
 <body>
     <div class="main-container">
-        <h1 class="header">Dom Practice 2</h1>
+        <h1 class="header">Tip Calculator</h1>
         <label for="number">Number</label>
-        <input class="input" name="number" type="text">
+        <input onchange="displayValue()" class="input" name="number" type="text">
         <button class="button">Submit</button>
         <h3>Your number is:</h3>
         <p class="displayNumber"></p>
@@ -23,6 +24,14 @@
         console.log(displayNumber)
         
     }
-    displayValue()
-</script>
+   // displayValue()
+   //.value can bu used to grab the value currently residing inside the element
+   // event handlers can be put on certain html elements 
+   //they eill trigger, when an event happens.
+   //onchange: triggers when something has changed inside the element
+   //onclick: triggers when it is clicked
+
+
+
+   </script>
 </html>
