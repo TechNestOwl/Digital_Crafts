@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+</body>
+<script>
+    const mainDiv = document.createElement("div")
+    mainDiv.className = "main-container"
+
+    console.log(mainDiv)
+
+    const unOrderedList = document.createElement("ul")
+    unOrderedList.className = "uList"
+    //console.log(unOrderedList)
+    
+    const listItem = document.createElement("li")
+    const listItem2 = document.createElement("li")
+    listItem.innerText = "first item"
+    listItem2.innerText = "second item"
+    unOrderedList.append(listItem)
+    //console.log(listItem)
+
+    const inputField = document.createElement("input")
+    console.log(inputField)
+    const radioButt = document.createElement("button")
+    console.log(radioButt)
+    mainDiv.append(inputField)
+    mainDiv.append(unOrderedList)
+
+
+
+
+</script>
+</html>
