@@ -13,7 +13,7 @@
 <body>
     <header> 
         <h1>To-Do List</h1>
-        <button class="btn-add">Add New Item</button>
+        <button class="todo-input">Add New Item</button>
     </header>
     <div class="main-container">
         
@@ -32,9 +32,10 @@
     //const newItem = window.prompt("What would you like to add?");
 
     const container = document.querySelector(".main-container");
-    const addBtn = document.querySelector(".btn-add");
+    const addBtn = document.querySelector(".todo-input");
     addBtn.addEventListener("click", addItem);
     const toInput = document.createElement("input");
+    toInput.className = "todo-input";
     const list = document.querySelector(".main-list");
 
     function addText(){
@@ -45,9 +46,10 @@
     }
     
     function addItem(){
+        const inputValue = document.querySelector("toInput").value;
         const newListItem = document.createElement("li");
         
-        //console.log("added new li");
+        console.log("adding new li");
         list.append(newListItem);
     }
     addText()
