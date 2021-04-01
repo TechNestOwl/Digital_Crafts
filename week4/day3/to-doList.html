@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="to-doList.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <header> 
+        <h1>To-Do List</h1>
+        <button class="btn-add">Add New Item</button>
+    </header>
+    <div class="main-container">
+        
+    </div>
+    <ul class="main-list">
+
+    </ul>
+</body>
+
+<script>
+    //greeting
+
+    /*window.onload = function(){
+    alert('Hello, welcome to To-Do');
+    }*/
+    //const newItem = window.prompt("What would you like to add?");
+
+    const container = document.querySelector(".main-container");
+    const addBtn = document.querySelector(".btn-add");
+    addBtn.addEventListener("click", addItem);
+    const toInput = document.createElement("input");
+    const list = document.querySelector(".main-list");
+
+    function addText(){
+        const heading = document.createElement("h2");
+        heading.innerText = "My List";
+        container.append(heading);
+        container.append(toInput);
+    }
+    
+    function addItem(){
+        const newListItem = document.createElement("li");
+        
+        //console.log("added new li");
+        list.append(newListItem);
+    }
+    addText()
+</script>
+</html>
