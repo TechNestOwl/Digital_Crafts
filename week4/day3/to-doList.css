@@ -1,27 +1,33 @@
 body {
-    background: #005AA7;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FFFDE4, #005AA7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    font-family: "Montserrat", sans-serif;
-    background-color: rgba(52, 52, 58, 0.53);
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    width: 100%;
-    flex-direction: column;
+  background: #005aa7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #fffde4,
+    #005aa7
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #fffde4,
+    #005aa7
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: "Montserrat", sans-serif;
+  background-color: rgba(52, 52, 58, 0.53);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
 }
 
 .btn-add {
-    width: 6em;
-    height:3em;
-    font-size: 1em;
-    border: none;
-    background-color: blue;
-    color:white;
-    cursor: pointer;
-    border-radius: 0.2em;
-    outline: none;
-    padding:5px;
-    
+  width: 6em;
+  height: 3em;
+  font-size: 1em;
+  border: none;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+  border-radius: 0.2em;
+  outline: none;
+  padding: 5px;
 }
-
