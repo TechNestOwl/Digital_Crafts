@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Racecar
+    </p>
+
+</body>
+<script>
+
+    let string1 = "reverseMe";
+    let string2= "racecar";
+
+function ReverseString(string) {
+ 
+  // Take empty array revArray
+  const revArray = [];
+  const length = string.length - 1;
+    
+  // Looping from the end
+  for(let i = length; i >= 0; i--) {
+      revArray.push(string[i]);
+  }
+    
+  // Joining the array elements
+  return revArray.join('');
+}
+console.log(ReverseString(string1))
+
+</script>
+</html>
