@@ -1,0 +1,6 @@
+body {
+    height: 100vh;
+    background: linear-gradient(to bottom, #8ad9ee, #76cced, #66beeb, #5cb0e8, #5aa1e4, #489fe1, #319ede, #009cda, #00a4cd, #00a9b3, #00ab90, #44aa6a);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
