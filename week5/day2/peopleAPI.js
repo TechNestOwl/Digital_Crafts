@@ -10,11 +10,13 @@ const getPpl = async () => {
     let retrievePhoto = await fetch("https://fakerapi.it/api/v1/users?_quantity=1&_gender=male")
     let formattedPhoto = await retrievePhoto.json();
     console.log(formattedPhoto);
+
     for (let person of formattedPpl.data) {
         const pplCard = document.createElement("div");
         pplCard.className = "peopleCard";
         //name
         const personName = document.createElement('h3');
+        // ?? const personFullName = "Name: " + person[0].firstname + " " + person[0].lastname;
         const personFullName = "Name: " + formattedPpl.data[0].firstname + " " + formattedPpl.data[0].lastname;
         personName.innerHTML = personFullName;
         
@@ -24,9 +26,11 @@ const getPpl = async () => {
         photo.height = "250"
         photo.width = "250"
         pplCard.append(personName,photo);
+        mainContainer.append(pplCard);
     }
     
 }
+
 
 const getPlc = async () => {
     let retrievePlc = await fetch("https://fakerapi.it/api/v1/addresses?_quantity=1")
@@ -45,5 +49,3 @@ pplBtn.addEventListener("click", function() {
 plcBtn.addEventListener("click",function() {
     getPlc();
 })
-
-
