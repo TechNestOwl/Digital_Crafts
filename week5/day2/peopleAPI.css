@@ -4,3 +4,22 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+#btnBox {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+
+
+}
+.card {
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-direction: column;
+
+}
+/* .card {
+    border: black;
+    border-style: dotted;
+} */
