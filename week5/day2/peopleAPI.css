@@ -51,9 +51,15 @@ body {
 
 .peopleCard {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
+  justify-content: center;
+}
+.card__image {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  border: 5px solid #272133;
+  margin-top: 20px;
+  box-shadow: 0 10px 50px rgba(235, 25, 110, 1);
 }
 /* .card {
     border: black;

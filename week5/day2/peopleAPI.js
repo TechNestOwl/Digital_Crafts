@@ -23,8 +23,7 @@ const getPpl = async () => {
         //add photo
         const photo = document.createElement('img');
         photo.src = formattedPhoto.data[0].image;
-        photo.height = "250"
-        photo.width = "250"
+        photo.className = "card__image";
         pplCard.append(personName,photo);
         mainContainer.append(pplCard);
     }
