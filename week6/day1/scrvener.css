@@ -19,17 +19,23 @@ body {
   max-width: 75%;
   height: auto;
 }
+
+img {
+  padding: 15px;
+}
 .displayBox {
   width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .scroll-box {
   overflow: auto;
-  height: 500px;
+  height: inherit;
+  width: 100%;
   float: left;
   padding: 1rem;
 }
 
-.card {
+/* .card {
   border: black;
   border-style: solid;
-}
+} */
