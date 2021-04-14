@@ -1,0 +1,35 @@
+#landingLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(234, 245, 245, 0.55);
+}
+.navLogo {
+  height: 60px;
+}
+body {
+  background: #334d50;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #334d50, #cbcaa5);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #334d50, #cbcaa5);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.responsive {
+  max-width: 75%;
+  height: auto;
+}
+.displayBox {
+  width: 100%;
+}
+/* .scroll-box {
+    overflow: auto;
+    height: 500px;
+    float:left;
+    padding: 1rem;
+}
+
+.card {
+    border:black;
+    border-style: solid;
+} */

@@ -10,8 +10,11 @@
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
+
+
 <body>
     <div id="main-container">
+<!-- Navigation bar -->
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -24,6 +27,7 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
+                        <!-- <li></li><img src="images/scrivenerBook.png" alt="Small Scrivener Logo" height="100"></li> -->
                         <li class="active"><a href="landing.html">Home</a></li>
                         <li><a href="book1.html">Book 1</a></li>
                         <li><a href="book2.html">Book 2</a></li>
@@ -31,14 +35,18 @@
                         <li><a href="aboutMe.html">About Me</a></li>
                     </ul>
                 </div>
-            <!-- <button class="btn btn-danger navbar-btn">Search Google</button> -->
             </div>
         </nav>
-
-        <div id="landingBackground">
-            <img src="images/scrivener.png" alt="Scrivener Logo"></a>
+<!-- main content for landing page -->
+        <h1 id="landingLogo"><img src="images/scrivener.png" alt="Scrivener Logo" height="200"></h1>
+        <div class="container-fluid">
+            <div class="row">
+            <div class="col-sm-2" style="background-color:lavender;">empty column over heree</div>
+            <div class="col-sm-8" style="background-color:lavenderblush;">Empty is what an empty does</a></div>
+            <div class="col-sm-2" style="background-color:lavender;">anoter empty column</div>
+            </div>
         </div>
-
+            <!-- Cards for book selection -->
         <div id="bookCards">
             <!-- <ul>
                 <li>The Great Gatsby</li>
@@ -49,6 +57,6 @@
     </div>
     
 </body>
-<script src="scrivScript.js"></script>
+<!-- <script src="scrivScript.js"></script> -->
 
 </html>
