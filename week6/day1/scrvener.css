@@ -27,9 +27,13 @@ img {
   width: 100%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.fileContent {
+  width: inherit;
+}
 .scroll-box {
   overflow: auto;
   height: inherit;
+  width: inherit;
   width: 100%;
   float: left;
   padding: 1rem;
@@ -39,3 +43,11 @@ img {
   border: black;
   border-style: solid;
 } */
+
+.bookPubInfo {
+  font-weight:900;
+  text-indent: 5px;
+}
+#bookDescription {
+  height: 250px;
+}

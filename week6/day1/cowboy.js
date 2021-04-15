@@ -5,21 +5,21 @@ const bookDescription = document.querySelector("#bookDescription");
 const fileContent = document.querySelector(".fileContent");
 const infoBtn = document.querySelector("#infoBtn");
 
-const getBookGatsby = async () => {
-    const retrieveBook = await fetch("https://openlibrary.org/books/OL26491056M.json")
+const getBook = async () => {
+    const retrieveBook = await fetch("https://openlibrary.org/books/OL7173600M.json")
     let formattedBook = await retrieveBook.json();
     console.log(formattedBook);
 
     const bookPublishDate = formattedBook.publish_date;
     publishDate.innerHTML = bookPublishDate;
     
-    const bookDescrip = formattedBook.description;
+    const bookDescrip = formattedBook.first_sentence.value;
     bookDescription.innerHTML = bookDescrip;
     // console.log(formattedGatsby.description);
 
 }
 infoBtn.addEventListener("click", function() {
-    getBookGatsby();
+    getBook();
 })
 
 // get text stats for selected book
