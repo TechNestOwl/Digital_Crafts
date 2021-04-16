@@ -50,5 +50,8 @@ function getDocStats(txtFile) {
         }
     }
 
+    docLength.innerText = "Document Length: " + text.length;
+    wordCount.innerText = "Word Count: " + wordArray.length;
+
 }
 getDocStats(fileContent);

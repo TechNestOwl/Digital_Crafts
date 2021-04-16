@@ -16,12 +16,14 @@
             <!-- Main Content Area -->
             <div class="col-md-8">
                 <!-- <img class="responsive" src="images/gatsbyphoto.jpeg"> -->
-                <img src="images/scrivener.png" class="responsive">
+                <a href="landing.html">
+                    <img src="images/scrivener.png" class="responsive">
+                </a>
                 <div class="card mb-4">
                     <h2 class="card-header" id="filename">Log Of A Cowboy</h2>
                     <div class="card-body">
                         <div class="displayBox scroll-box">
-                            <embed src="books/gatsby.txt" class="fileContent" id="gatsby">
+                            <embed src="books/logOFcowboy.txt" class="fileContent" id="cowboy">
                         </div>
                     </div>
                     <div class="card-footer text-muted">
@@ -107,14 +109,18 @@
                             <div class="col-md-12">
                                 <button type="button" class="btn btn-outline-primary" id="infoBtn">Get Info</button>
                                 <ul class="list-unstyled mb-0" id="publishingInfo">
-                                    <li id="publisher">** Insert publisher **</li>
-                                    <!-- <li class="displayBox scroll-box"><div id="bookDescription"></div></li> -->
-                                    <li class="displayBox scroll-box" id="bookDescription"></li>
-                                    <li id="publishDate"></li>
-                                    <li id="bookAuthor">Novel by F. Scott Fitzgerald</li>
+                                    <span class="bookPubInfo">Publisher:</span><li id="publisher"></li>
+                                    
+                                    <span class="bookPubInfo">Publish Date:</span><li id="publishDate"></li>
+                                    <span class="bookPubInfo">Novel by:</span><li id="bookAuthor"> Andy Adams</li>
+                                    <span class="bookPubInfo">Description:</span><li><div class="displayBox scroll-box" id="bookDescription"></div></li>
                                 </ul>
                             </div>
                         </div>
+                    </div>
+                    <div class="card-footer" id="pubInfo footer">
+                        <a href="https://archive.org/details/logofcowboynarra00adam/mode/2up?view=theater" target="_blank">Virtual Book</a>
+                        
                     </div>
                 </div>
             </div>

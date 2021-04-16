@@ -17,6 +17,9 @@ const getBook = async () => {
     bookDescription.innerHTML = bookDescrip;
     // console.log(formattedGatsby.description);
 
+    const bookPublshier = formattedBook.publishers;
+    publisher.innerHTML = bookPublshier;
+
 }
 infoBtn.addEventListener("click", function() {
     getBook();
@@ -32,4 +35,4 @@ function getDocStats(txtFile) {
     let text = txtFile;
     console.log(txtFile);
 }
-getDocStats(fileContent);
+// getDocStats(fileContent);
