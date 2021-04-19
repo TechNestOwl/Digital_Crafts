@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "../../../python_rpg_game"
+	},
+	{
+		"path": "../.."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "digital_crafts"
+  }
+}

@@ -8,7 +8,7 @@
   height: 60px;
 }
 body {
-  background: #657678;
+  background: #334d50;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #334d50, #cbcaa5);
   /* Chrome 10-25, Safari 5.1-6 */
@@ -50,7 +50,4 @@ img {
 }
 #bookDescription {
   height: 250px;
-}
-.card-header {
-  background-color: #dde6d67e;
 }
