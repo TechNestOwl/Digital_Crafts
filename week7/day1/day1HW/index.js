@@ -20,7 +20,4 @@ app.get("/contact", (req,res) => {
     })
 });
 
-app.listen(PORT, () => {
-    console.log("Hello my first node server!");
-});
 
