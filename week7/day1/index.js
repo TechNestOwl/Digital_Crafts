@@ -1,6 +1,6 @@
 console.log("hi");
 const app = express();
-const http = require("hhtp");
+const http = require("http");
 const address = "127.0.0.1"
 const PORT = 3002;
 
