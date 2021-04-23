@@ -4,8 +4,6 @@ const cors = require("cors");
 const port = process.env.PORT || 3005;
 const pool = require("./db.js");
 
-
-//middleware
 app.use(express.json());
 app.use(cors());
 
@@ -17,17 +15,44 @@ app.listen(port, () => {
     console.log(`listening on port ${port}`);
 });
 
-app.post("/people", async (req,res) => {
+//I'm creating the person
+app.post("/peoplelist", async (req,res) => {
     try {
         const {person_id,first_name,last_name,email} = req.body
 
         const newPeopleDB = await pool.query(
             "INSERT INTO people (person_id,first_name,last_name,email) VALUES($1,$2,$3,$4)",
             [person_id,first_name,last_name,email]);
-            
+
         console.log(req.body);
         res.json(newPeopleDB);
     }catch (err){
         console.log(err.message)
     }
 });
+
+//reaading teh person table?
+app.get("/read_people", async (req,res) => {
+    try{
+        const readPeopleFromDB = await pool.query(
+            "SELECT * FROM people"
+        );
+        res.json(readPeopleFromDB.rows);
+    }catch (err){
+        console.log(err.message);
+    }
+});
+//reading specific person by id
+app.get("/read_people/:id", async (req,res) => {
+    try{
+        const {id}= req.params;
+        const readingSpecificPerson = await pool.query(
+            "SELECT * FROM people WHERE person_id = ($1)",[id]
+        );
+        res.json(readingSpecificPerson);
+        }catch(err) {
+            console.log(err.message);
+        }
+});
+
+

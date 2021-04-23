@@ -45,7 +45,6 @@ app.get("/read_todos", async (req, res) => {
 app.get("/read_todos/:id", async (req, res) => {
   try {
     const { id } = req.params; // this looks at the url for whatever you put in :
-
     const readSingleTodoFromDB = await pool.query(
       "SELECT * from todo WHERE todo_id = ($1)",
       [id]
