@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const port = process.env.PORT || 3002;
-const pool = require("../day4/server/db.js");
+const pool = require("./server/db.js");
 
 //middleware
 app.use(express.json());
@@ -11,7 +11,6 @@ app.use(cors());
 app.get("/", (req, res) => {
   res.send("Welcome to node server");
 });
-
 // routes that we define for our node server
 
 // create todo
