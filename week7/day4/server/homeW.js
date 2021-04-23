@@ -27,7 +27,7 @@ app.post("/peoplelist", async (req,res) => {
         console.log(req.body);
         res.json(newPeopleDB);
     }catch (err){
-        console.log(err.message)
+        console.error(err.message)
     }
 });
 
@@ -39,7 +39,7 @@ app.get("/read_people", async (req,res) => {
         );
         res.json(readPeopleFromDB.rows);
     }catch (err){
-        console.log(err.message);
+        console.error(err.message);
     }
 });
 //reading specific person by id
@@ -51,8 +51,34 @@ app.get("/read_people/:id", async (req,res) => {
         );
         res.json(readingSpecificPerson);
         }catch(err) {
-            console.log(err.message);
+            console.error(err.message);
         }
 });
+//updating a persons details in people table
+app.put("/update_person/:id", async (req,res) => {
+    try{
+        const {id} = req.params;
+        const {first_name,last_name,email} = req.body
+        const updatePersonInDB = await pool.query(
+            "UPDATE people SET first_name = $1, last_name = $2, email = $3 WHERE person_id = $4",
+            [first_name,last_name,email,person_id]
+        );
+        res.json("Updated person info");
+    } catch (err) {
+        console.error(err.message);
+    }
+})
 
-
+//deleting 
+app.delete("/delete_people/:id", async (req, res) => {
+    try {
+        const { id } = req.params;
+        const deletePeopleInDB = await pool.query(
+        "DELETE FROM people WHERE person_id = $1",
+        [id]
+        );
+        res.json("Person was successfully deleted!");
+    } catch (err) {
+        console.log(err.message);
+    }
+});
