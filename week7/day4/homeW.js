@@ -19,9 +19,12 @@ app.listen(port, () => {
 
 app.post("/people", async (req,res) => {
     try {
-        const {first_name} = req.body
+        const {person_id,first_name,last_name,email} = req.body
 
-        const newPeopleDB = await pool.query("INSERT INTO people (first_name) VALUES($1)", [first_name])
+        const newPeopleDB = await pool.query(
+            "INSERT INTO people (person_id,first_name,last_name,email) VALUES($1,$2,$3,$4)",
+            [person_id,first_name,last_name,email]);
+            
         console.log(req.body);
         res.json(newPeopleDB);
     }catch (err){
