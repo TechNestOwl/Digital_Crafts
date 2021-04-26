@@ -41,9 +41,35 @@ app.get("/read_todoList", async (req,res) => {
     }catch(err){
         console.error(err.message)
     }
-
 });
 
+//UPDATE 
+app.put("/update_todoList/:id", async (req,res)=> {
+    try{
+        const {id} = req.params;
+        const {task_name, task_importance} = req.body
+        const updatetodoListByID = await pool.query(
+            "UPDATE todoList SET task_name = $1, task_importance = $2, WHERE task_id = $3",
+            [task_name, task_importance, task_id]
+        )
+    }catch(err) {
+        console.error(err.message)
+    }
+});
+
+//DELETE
+app.delete("/delete_task/:id", async (req,res)=> {
+    try{
+        const {id} = req.params;
+        const deleteTaskByID = await pool.query(
+            "DELETE FROM todoList WHERE task_id = $1",
+            [id]
+        );
+        res.json("Task was successfully deleted")
+    }catch(err){
+        console.error(err.message)
+    };
+});
 
 
 
@@ -58,13 +84,13 @@ app.get('/todo/:id', (req,res)=> {
     if (task) {
         res.render('todo', {
             locals: {
-                friend
+                todoList
             }
         });
         // let htmlData = ``;
-        // htmlData += `<h1>${friend.name}</h1>`;
-        // htmlData += `<h1>${friend.handle}</h1>`;
-        // htmlData += `<h1>${friend.skill}</h1>`;
+        // htmlData += `<h1>${task_id}</h1>`;
+        // htmlData += `<h1>${task_name}</h1>`;
+        // htmlData += `<h1>${task_importance}</h1>`;
         // res.send(htmlData);
     }else {
         res.status(404)
