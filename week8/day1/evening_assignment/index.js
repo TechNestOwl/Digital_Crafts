@@ -8,6 +8,14 @@ app.get("/", (req,res)=> {
     res.send("Welcome to Node server")
 });
 
+var app = require('express')();
+
+//Adding CSS 'StackOverFlow'
+app.get('/', function(req, res) {
+    res.sendFile(__dirname + "/" + "index.html");
+});
+<link rel="stylesheet" href="style.css"></link>
+
 //CREATE 
 app.post('/todo', async (req,res)=> {
     try{
