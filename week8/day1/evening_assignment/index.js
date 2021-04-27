@@ -8,14 +8,6 @@ app.get("/", (req,res)=> {
     res.send("Welcome to Node server")
 });
 
-//template engine
-const es6Renderer = require('express-es6-template-engine');
-app.engine('html',es6Renderer);
-app.set('views', 'templates');
-app.set('view engine', 'html');
-
-
-
 //CREATE 
 app.post('/todo', async (req,res)=> {
     try{
@@ -70,6 +62,13 @@ app.delete("/delete_task/:id", async (req,res)=> {
         console.error(err.message)
     };
 });
+
+
+//template engine
+const es6Renderer = require('express-es6-template-engine');
+app.engine('html',es6Renderer);
+app.set('views', 'templates');
+app.set('view engine', 'html');
 
 
 
