@@ -1,5 +1,6 @@
 const Sequelize = require("sequelize");
 const {User} = require("./models");
+const {User, Photo } = require('./models');
 
 //creat a new user
 app.post('/users', async (req,res)=> {
@@ -60,3 +61,14 @@ app.delete('/users/:id', async (req,res) => {
     });
     res.json(deletedUser);
 });
+
+//get all users with their photos
+app.get('/users/photos', async (req,res) => {
+    const users = await User.findAll({
+        include: [{
+            model: Photo
+        }]
+    });
+    res.json(users);
+});
+
