@@ -11,10 +11,9 @@ app.get("/", (req,res)=> {
 var app = require('express')();
 
 //Adding CSS 'StackOverFlow'
-app.get('/', function(req, res) {
-    res.sendFile(__dirname + "/" + "index.html");
+app.get('/styles.css', (req,res)=> {
+    res.sendFile("evening_assignment" + "/" + "styles.css");
 });
-<link rel="stylesheet" href="style.css"></link>
 
 //CREATE 
 app.post('/todo', async (req,res)=> {
@@ -79,7 +78,6 @@ app.set('views', 'templates');
 app.set('view engine', 'html');
 
 
-
 app.get('/home', (req,res)=> {
     res.render('home');
 });
@@ -99,7 +97,7 @@ app.get('/todo/:id', (req,res)=> {
         // htmlData += `<h1>${task_name}</h1>`;
         // htmlData += `<h1>${task_importance}</h1>`;
         // res.send(htmlData);
-    }else {
+// I need to write more code everytije I time     }else {
         res.status(404)
         .send(`You have no tasks with the id: ${id}`)
     }
@@ -108,3 +106,5 @@ app.get('/todo/:id', (req,res)=> {
 app.listen(PORT, ()=> {
     console.log(`Listening on port:${PORT}`)
 });
+
+//search google for 'programming illustrations'
