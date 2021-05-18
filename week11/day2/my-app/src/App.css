@@ -1,0 +1,43 @@
+ul {
+  list-style: none;
+}
+a {
+  font-size: 15px;
+  text-decoration: none;
+  color: rgb(160, 160, 155);
+}
+.navigation {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: sans-serif;
+  height: 5vh;
+  padding: 1rem;
+  background-color: rgb(240, 239, 239);
+}
+.googleLogo {
+  display: flex;
+  justify-content: center;
+  padding-top: 175px;
+}
+.searchBar {
+  display: flex;
+  justify-content: center;
+}
+.searchButtons {
+  display: flex;
+  justify-content: center;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 15px;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(240, 239, 239);
+}
