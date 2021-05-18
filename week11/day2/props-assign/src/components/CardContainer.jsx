@@ -1,16 +1,40 @@
-import React, { Component } from 'react'
-import Card from './Card'
+import React, { Component } from 'react';
+import Card from "./Card"
+import "./cardContainer.css"
 
-export default class CardContainer extends Component {
+class CardContainer extends Component {
+    state = {
+        searchCriteria: ""
+    }
+   
+   searchCriteria = (event) =>{
+       this.setState({
+           searchCriteria:event.target.value
+       })
+   }
+
     render() {
-        console.log(this.props.pokemonData)
+        
         const {pokemonData} = this.props
-        console.log(pokemonData[0].pokemon);
+        
+        const filteredData = pokemonData[0].pokemon.filter(pokemon => pokemon.name.includes(this.state.searchCriteria))
+
+        console.log(filteredData)
         return (
-            <div>
-                <h1>Card Container</h1>
-                    {pokemonData[0].pokemon.map((singlePokemon,index) => <Card key={singlePokemon.name} singlePokemon={singlePokemon}/>)}
+            <div className="main-card-container">
+                
+                <input onChange={(e)=>this.searchCriteria(e)} type="text" placeholder="Search for a pokemon"/>
+                <button>Submit</button>
+                <div className="card-container">
+
+                {filteredData.map((singlePokemon,index) => <Card key={singlePokemon.name}  pokemon={singlePokemon}  />
+                )}
+                </div>
+              
             </div>
-        )
-    };
-};
+        );
+    }
+}
+
+
+export default CardContainer;

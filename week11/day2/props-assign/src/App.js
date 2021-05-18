@@ -2,7 +2,7 @@ import './App.css';
 import CardContainer from './components/CardContainer'
 import {data} from './data/data'
 
-console.log(data);
+// console.log(data);
 function App() {
   return (
     <div className="App">
