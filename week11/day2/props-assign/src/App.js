@@ -6,7 +6,7 @@ import {data} from './data/data'
 function App() {
   return (
     <div className="App">
-      <h1>Home Page</h1>
+      <h1>Pokemon Search</h1>
       <CardContainer pokemonData={data} />
     </div>
   );
