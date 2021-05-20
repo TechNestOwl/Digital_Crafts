@@ -7,8 +7,9 @@ class CardContainer extends Component {
         searchCriteria: "",
         newPokemonName: "",
         newPokemonHP: "",
-        loading: false,
-    
+        frontUrl: "",
+        backUrl:"",
+        pokeList:[]
     }
 
     
@@ -46,14 +47,29 @@ class CardContainer extends Component {
           
         handleSubmit = (e) => {
             e.preventDefault();
-            const newPokeCard = []
+            const newPokeCard =  {
+              name: this.state.newPokemonName,
+              hp: this.state.newPokemonHP,
+              sprites: {
+                front:"",
+                back:"",
+              }
+            }
+            const newPokemonList = [newPokeCard, ...this.state.pokeList]
             this.setState({
-                loading: true,
-              });
-              let { newPokemonName, newPokemonHP } = this.state;
-              console.log(newPokemonName, newPokemonHP);
-              newPokeCard.push(newPokemonName,newPokemonHP);
-              console.log(newPokeCard);
+              pokeList: newPokemonList
+            })
+          };
+              // let { newPokemonName, newPokemonHP } = this.state;
+              // console.log(newPokemonName, newPokemonHP);
+              // newPokeCard.push(newPokemonName,newPokemonHP);
+              // console.log(newPokeCard);
+              
+              componentDidMount() {
+                this.setState({
+                  pokeList:this.props.pokemonData[0].pokemon
+                })
+              };
 
             //   const formSubmissionData = {
             //     restaurantName: firstName + lastName,
@@ -65,20 +81,12 @@ class CardContainer extends Component {
               // const { data, error } = await supabase
               //   .from("restaurants")
               //   .insert([formSubmissionData]);
-              setTimeout(
-                () =>
-                  this.setState({
-                    loading: false,
-                  }),
-                4000
-              );
-            };
+                
+            
             
             render() {
         
-                const {pokemonData} = this.props
-        const filteredData = pokemonData[0].pokemon.filter(pokemon => pokemon.name.includes(this.state.searchCriteria)) ? pokemonData[0].pokemon.filter(pokemon => pokemon.name.includes(this.state.searchCriteria)) :pokemonData[0].pokemon
-        
+        const filteredData = this.state.pokeList.filter(pokemon => pokemon.name.includes(this.state.searchCriteria)) ? this.state.pokeList.filter(pokemon => pokemon.name.includes(this.state.searchCriteria)) :this.state.pokeList
         return (
             <div className="main-card-container">
                 <div>
