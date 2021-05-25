@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+}
+
+li {
+  color: white;
+  text-decoration: none;
+  list-style: none;
+}
+
+nav {
+  background-color: rgb(28, 28, 101);
+}
