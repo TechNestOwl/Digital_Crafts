@@ -1,5 +1,9 @@
 import React from 'react'
 import {useSelector, useDispatch} from 'react-redux';
+import {
+    incrementOne,
+    decrementOne,
+} from "../actions/counterActions";
 
 
 export default function Counter() {
@@ -10,9 +14,9 @@ export default function Counter() {
         <div>
             <h1>Counter</h1>
             <br></br>
-            <button onClick={()=> dispatch({type:"SUBTRACT"})}>Add</button>
+            <button onClick={()=> incrementOne(dispatch)}>Add</button>
             <p>{counter}</p>
-            <button onClick={()=> dispatch({type:"ADD"})}>Add</button>
+            <button onClick={()=> decrementOne(dispatch)}>Add</button>
         </div>
     )
-}
+};
